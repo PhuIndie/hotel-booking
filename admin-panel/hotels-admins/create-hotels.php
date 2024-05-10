@@ -24,7 +24,7 @@ if(isset($_POST["submit"])) {
        ":location" => $location,
        ":image" => $image,
     ]);
-
+    ini_set('display_errors', 0);
     if(move_uploaded_file($_FILES['image']['tmp_name'], $dir)) {
       header("location: show-hotels.php");
     }

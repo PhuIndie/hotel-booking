@@ -13,7 +13,7 @@
       $update->execute([
       ":status"=> $status,
     ]);
-
+    ini_set('display_errors', 0);
     header("location : show-hotel.php");
     }
    //}

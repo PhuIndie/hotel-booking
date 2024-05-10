@@ -160,7 +160,7 @@
 							<p><?php echo $utility->description;?></p>
 						</div>
 		            </div> 
-					<?php endforeach; ?>
+						<?php endforeach; ?>
 		          </div>  
 						</div>
 					</div>

@@ -26,7 +26,7 @@
     <section class="ftco-section bg-light ftco-no-pt ftco-no-pb">
 			<div class="container-fluid px-md-0">
 				<div class="row no-gutters">
-					<?php foreach($getALLRoom as $room): ?>
+				<?php foreach($getALLRoom as $room): ?>
     			<div class="col-lg-6">
     				<div class="room-wrap d-md-flex">
     					<a href="#" class="img" style="background-image: url(images/<?php echo $room->image; ?>);"></a>
