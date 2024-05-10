@@ -20,6 +20,7 @@
          ":email" => $email,
          ":mypassword" => $password,
       ]);
+      ini_set('display_errors', 0);
       header("location: admins.php");
     }
   }

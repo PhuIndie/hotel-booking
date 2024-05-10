@@ -41,7 +41,7 @@
                     <td><?php echo $booking->hotel_name;?></td>
                     <td><?php echo $booking->room_name;?></td>
                     <td><?php echo $booking->status;?></td>
-                    <td><?php echo $booking->payment;?></td>
+                    <td>$<?php echo $booking->payment;?></td>
                     
                      <td><a href="status-bookings.php?id=<?php echo $booking->id;?>" class="btn btn-warning text-white text-center ">status</a></td>
                   </tr>

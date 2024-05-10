@@ -26,7 +26,6 @@
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarText">
         <?php if(isset($_SESSION['adminname'])) : ?>
         <ul class="navbar-nav side-nav" >
@@ -71,7 +70,6 @@
               
           </li>
         <?php endif; ?>              
-          
         </ul>
       </div>
     </div>

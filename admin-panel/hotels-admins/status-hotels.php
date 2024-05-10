@@ -8,7 +8,7 @@
     //   if(empty($_POST["status"])){
     //     echo "<script> alert('one more input are empty')</script>";
     // } else {
-      $update = $_POST['status'];
+      $status = $_POST['status'];
       $update = $conn->prepare("UPDATE hotels SET status = :status WHERE id='$id'");
       $update->execute([
       ":status"=> $status,

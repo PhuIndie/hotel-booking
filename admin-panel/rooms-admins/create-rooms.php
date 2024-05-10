@@ -40,10 +40,8 @@ if(isset($_POST["submit"])) {
        ":hotel_id" => $hotel_id,
        ":image" => $image,
     ]);
-
-    if(move_uploaded_file($_FILES['image']['tmp_name'], $dir)) {
-      header("location: show-rooms.php");
-    }
+    ini_set('display_errors', 0);
+    header("location: show-rooms.php");
   }
 }
 

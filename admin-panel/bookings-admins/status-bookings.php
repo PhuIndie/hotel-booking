@@ -1,14 +1,15 @@
 <?php require "../layouts/header.php" ; ?>
 <?php require "../../config/config.php" ; ?>
 <?php 
-
   if(isset($_GET['id'])) {
     $id = $_GET['id'];
-    if(isset($_POST['submit'])) {
+
+  if(isset($_POST['submit'])) {
     //   if(empty($_POST["status"])){
     //     echo "<script> alert('one more input are empty')</script>";
     // } else {
-      $update = $_POST['status'];
+      $status = $_POST['status'];
+      $query = "INSERT INTO bookings(status) VALUES ('$update')";
       $update = $conn->prepare("UPDATE bookings SET status = :status WHERE id='$id'");
       $update->execute([
       ":status"=> $status,
@@ -31,6 +32,7 @@
                 <!-- Email input -->
                 <select name="status" style="margin-top: 15px;" class="form-control">
                     <option>Choose Status</option>
+                    <option value="canceled">Canceled</option>
                     <option value="pending">Pending</option>
                     <option value="confirmed">Confirmed</option>
                     <option value="done">Done</option>
