@@ -3,14 +3,28 @@
     if(isset($_GET['id'])) {
         $id = $_GET['id'];
         $getImage = $conn->query("SELECT * FROM rooms WHERE id='$id'");
-        $getImage-> execute();
         $fetch = $getImage->fetch(PDO::FETCH_OBJ);
-        unlink("rooms_images/". $fetch->image);
+?>
 
-        $delete = $conn->query("DELETE FROM rooms WHERE id = '$id'");
-        $delete->execute();
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Confirmation</title>
+    <script>
+        function confirmDelete() {
+            var result = confirm("Are you sure you want to delete this item?");
+            if (result) {
+                window.location.href = "delete.php?id=<?php echo $id; ?>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="confirmDelete()">Delete</button>
+    <a href="show-rooms.php">Cancel</a>
+</body>
+</html>
 
-        header("location: show-rooms.php");
-    }
-
+<?php 
+    } // End of isset($_GET['id'])
 ?>

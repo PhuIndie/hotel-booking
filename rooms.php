@@ -3,7 +3,7 @@
 <?php 
 	if(isset($_GET['id'])){
 		$id = $_GET['id'];
-		$getRoom = $conn->query("SELECT * FROM rooms WHERE hotel_id = '$id'");
+		$getRoom = $conn->query("SELECT * FROM rooms WHERE hotel_id = '$id' AND status = 1");
 
 		$getRoom ->execute();
 		$getALLRoom = $getRoom -> fetchAll(PDO::FETCH_OBJ);
